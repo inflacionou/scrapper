@@ -17,4 +17,8 @@ async function seed() {
       }
     ]
   })
+
+  console.log("seeded!")
 }
+
+seed()

@@ -2,7 +2,7 @@ import prisma from "."
 import { Prisma } from "@prisma/client"
 
 
-export async function addPriceUpdate(input: Prisma.PriceUpdateCreateInput, productId: string) {
+export async function addPriceUpdate(input: Omit<Prisma.PriceUpdateCreateInput, "product">, productId: string) {
   try {
     await prisma.priceUpdate.create({
       data: {
