@@ -1,0 +1,25 @@
+{
+  "name": "poketto-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json ./src/index.ts",
+    "start": "node --loader ts-node/esm ./src/index.ts",
+    "build": "tsc",
+    "prod": "node --loader ts-node/esm ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "puppeteer": "^24.2.1"
+  }
+}
