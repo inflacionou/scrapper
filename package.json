@@ -7,7 +7,11 @@
     "dev": "nodemon",
     "start": "node --loader ts-node/esm ./src/index.ts",
     "build": "tsc",
-    "prod": "node --loader ts-node/esm ./dist/index.js"
+    "prod": "node --loader ts-node/esm ./dist/index.js",
+    "seed": "prisma db seed"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,11 +20,13 @@
   "devDependencies": {
     "@types/node": "^22.13.4",
     "nodemon": "^3.1.9",
+    "prisma": "^6.3.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@prisma/client": "6.3.1",
     "puppeteer": "^24.2.1",
     "zod": "^3.24.2"
   }
