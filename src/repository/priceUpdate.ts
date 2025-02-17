@@ -6,7 +6,8 @@ export async function addPriceUpdate(input: Omit<Prisma.PriceUpdateCreateInput, 
   try {
     await prisma.priceUpdate.create({
       data: {
-        ...input,
+        price: input.price,
+        pricePerKilo: input.pricePerKilo,
         product: {
           connect: {
             id: productId
