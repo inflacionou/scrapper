@@ -83,7 +83,7 @@ export async function parsePriceUpdate(page: Page, productId: string): Promise<P
 
   const object: PriceUpdate = {
     price: price,
-    pricePerKilo: kilograms !== null ? price / (kilograms / 1000) : 0,
+    pricePerKilo: kilograms !== null ? price / (kilograms / 1000) : price,
     productId
   }
 
