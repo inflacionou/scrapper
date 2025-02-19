@@ -1,4 +1,4 @@
-import { addNewProduct, addNewPriceUpdate } from "./scraper/addNewProduct"
+import { addNewPriceUpdate } from "./scraper/addNewProduct"
 import { getProducts } from "./repository/product"
 import { isToday } from "date-fns"
 
@@ -11,6 +11,7 @@ const main = async () => {
       await addNewPriceUpdate(product)
     }
   })
+
 }
 
 main()

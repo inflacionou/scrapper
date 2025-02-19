@@ -1,13 +1,12 @@
 {
-  "name": "poketto-back",
+  "name": "inflacionou-scraper",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon",
-    "start": "node --loader ts-node/esm ./src/index.ts",
-    "build": "tsc",
-    "prod": "node --loader ts-node/esm ./dist/index.js",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "prod": "node dist/index.js",
     "seed": "prisma db seed"
   },
   "prisma": {
@@ -18,10 +17,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.10.17",
     "@types/node": "^22.13.4",
     "nodemon": "^3.1.9",
     "prisma": "^6.3.1",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },

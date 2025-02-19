@@ -13,6 +13,8 @@ const priceUpdateSchema = z.object({
   productId: z.string()
 })
 
+
+
 type Product = z.infer<typeof productSchema>
 type PriceUpdate = z.infer<typeof priceUpdateSchema>
 
